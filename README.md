@@ -11,9 +11,10 @@ To run this benchmark, you will need to have .NET 7 or later installed on your m
 **Console**
 - Navigate to the solution
 - Execute the command in release configuration
-dotnet run --configuration Release --project ConsoleBenchmarkDotNet
 
-** Visual Studio **
+```dotnet run --configuration Release --project ConsoleBenchmarkDotNet```
+
+**Visual Studio**
 - Open the project in Visual studio (**ConsoleBenchmarkDotNet.sln**)
 - Change the configuration from Debug to Release
 - Run the project, without debugging.
