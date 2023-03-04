@@ -13,7 +13,7 @@ namespace ConsoleBenchmarkDotNet
     //[SimpleJob(RuntimeMoniker.NetCoreApp30)]
     //[SimpleJob(RuntimeMoniker.NativeAot70)]
     // [SimpleJob(RuntimeMoniker.Mono)]
-    [RPlotExporter]
+    [MemoryDiagnoser]
     public class Tester
     {
         [GlobalSetup]
