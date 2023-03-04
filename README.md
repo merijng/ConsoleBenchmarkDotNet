@@ -18,3 +18,8 @@ To run this benchmark, you will need to have .NET 7 or later installed on your m
 - Open the project in Visual studio (**ConsoleBenchmarkDotNet.sln**)
 - Change the configuration from Debug to Release
 - Run the project, without debugging.
+
+## Example result
+Below an example result, of the benchmark
+
+![image](https://user-images.githubusercontent.com/6886678/222903955-1c59c539-7173-462f-aea5-51a7bccff53c.png)
