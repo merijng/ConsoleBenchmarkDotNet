@@ -22,4 +22,4 @@ To run this benchmark, you will need to have .NET 7 or later installed on your m
 ## Example result
 Below an example result, of the benchmark
 
-![image](https://user-images.githubusercontent.com/6886678/222903955-1c59c539-7173-462f-aea5-51a7bccff53c.png)
+![image](https://user-images.githubusercontent.com/6886678/222904003-978e0e82-38b7-4dd3-b4b4-8bd381e4cf39.png)
