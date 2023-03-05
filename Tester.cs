@@ -22,19 +22,19 @@ namespace ConsoleBenchmarkDotNet
         }
 
         [Benchmark]
-        public void ReplaceFirst_Tests()
+        public void ReplaceSubstring()
         {
-            "Test string".ReplaceFirst("s", "X");
-            "Test test test".ReplaceFirst("test", "XX");
-            "Test test test".ReplaceFirst("test", "XX", StringComparison.OrdinalIgnoreCase);
+            "Test string".ReplaceSubstring("s", "X");
+            "Test test test".ReplaceSubstring("test", "XX");
+            "Test test test".ReplaceSubstring("test", "XX", StringComparison.OrdinalIgnoreCase);
         }
 
         [Benchmark]
-        public void ReplaceFirst2_Tests()
+        public void ReplaceSpan()
         {
-            "Test string".ReplaceFirst2("s", "X");
-            "Test test test".ReplaceFirst2("test", "XX");
-            "Test test test".ReplaceFirst2("test", "XX", StringComparison.OrdinalIgnoreCase);
+            "Test string".ReplaceSpan("s", "X");
+            "Test test test".ReplaceSpan("test", "XX");
+            "Test test test".ReplaceSpan("test", "XX", StringComparison.OrdinalIgnoreCase);
         }
     }
 }

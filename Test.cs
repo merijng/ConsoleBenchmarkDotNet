@@ -8,7 +8,7 @@ namespace ConsoleBenchmarkDotNet
 {
     public static class Test
     {
-        public static string ReplaceFirst(this string str, string search, string replace, StringComparison comparisonType = StringComparison.Ordinal)
+        public static string ReplaceSubstring(this string str, string search, string replace, StringComparison comparisonType = StringComparison.Ordinal)
         {
             //Check.NotNull(str, nameof(str));
 
@@ -21,7 +21,7 @@ namespace ConsoleBenchmarkDotNet
             return str.Substring(0, pos) + replace + str.Substring(pos + search.Length);
         }
 
-        public static string ReplaceFirst2(this string str, string search, string replace, StringComparison comparisonType = StringComparison.Ordinal)
+        public static string ReplaceSpan(this string str, string search, string replace, StringComparison comparisonType = StringComparison.Ordinal)
         {
             //Check.NotNull(str, nameof(str));
             int pos = str.IndexOf(search, comparisonType);
