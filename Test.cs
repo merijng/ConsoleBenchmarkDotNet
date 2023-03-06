@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ namespace ConsoleBenchmarkDotNet
                 return str;
             }
 
-            return str.Substring(0, pos) + replace + str.Substring(pos + search.Length);
+            return string.Concat(str.Substring(0, pos), replace, str.Substring(pos + search.Length));
         }
 
         public static string ReplaceSpan(this string str, string search, string replace, StringComparison comparisonType = StringComparison.Ordinal)
@@ -30,22 +31,8 @@ namespace ConsoleBenchmarkDotNet
                 return str;
             }
 
-            var searchLength = search.Length;
-            var replaceLength = replace.Length;
-            var newLength = str.Length - searchLength + replaceLength;
-
-            Span<char> buffer = stackalloc char[newLength];
-
-            // Copy the part of the original string before the search term
-            str.AsSpan(0, pos).CopyTo(buffer);
-
-            // Copy the replacement text
-            replace.AsSpan().CopyTo(buffer.Slice(pos));
-
-            // Copy the remainder of the original string
-            str.AsSpan(pos + searchLength).CopyTo(buffer.Slice(pos + replaceLength));
-
-            return buffer.ToString();
+            var sourceSpan = str.AsSpan();
+            return string.Concat(sourceSpan.Slice(0, pos), replace, sourceSpan.Slice(pos + search.Length));
         }
     }
 }
